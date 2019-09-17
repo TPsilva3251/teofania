@@ -1,1 +1,1 @@
-web: vendor/bin/herokup-php-apache2 public/
+web: vendor/bin/herokup-php-apache2 web/
