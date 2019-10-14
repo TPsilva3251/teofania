@@ -12,5 +12,17 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
+});
+Route::get('/biblias', function () {
+    return view('biblias');
+});
+Route::get('/livros', function () {
+    return view('livros');
+});
+Route::get('/midias', function () {
+    return view('midias');
+});
+Route::get('/faleconosco', function () {
+    return view('faleconosco');
 });
