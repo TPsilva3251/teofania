@@ -2,8 +2,8 @@
 <section>
     <br><br>
     <div class="divisory-primary"> Novidades</div>
-    <br><br><br><br>
-    <section class="carousel">
+    <br>
+    {{-- <section class="carousel">
         <input type="radio" name="carousel" id="carousel1" checked="checked" />
         <input type="radio" name="carousel" id="carousel2" />
         <input type="radio" name="carousel" id="carousel3" />
@@ -32,7 +32,40 @@
             <img class="carousel__image" src="https://scontent.fmoc4-1.fna.fbcdn.net/v/t1.0-9/69255601_922055974799449_585676798637899776_n.jpg?_nc_cat=107&_nc_oc=AQmT0sAPnndAGC4_RRQc3QFQ0SSMZtel0fHw_HH0OcioZ8-IgAbSooFKULlOm5PcpD0&_nc_ht=scontent.fmoc4-1.fna&oh=6124da642c855df09ed2fa06b1a521d1&oe=5E22E962" width="500" height="250">
             </aside>
         </main>
-    </section>
+    </section> --}}
+
+    <div class="content">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                      <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                          <img src="/slide1.png" class="img-fluid d-block">
+                        </div>
+                        <div class="carousel-item">
+                          <img src="/slide2.png" class="img-fluid d-block">
+                        </div>
+                        <div class="carousel-item">
+                          <img src="/slide3.png" class="img-fluid d-block">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/slide4.png" class="img-fluid d-block">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                </div>
+    </div>
 
 </section>
 <style>
@@ -45,110 +78,7 @@
     }
 
 
-    .carousel {
-        width: 100%;
-        height: 100%;
-        background-color: #BF3706;
-        transform: translateZ(0);
-    }
-
-    .carousel input {
-        position: absolute;
-        left: -10000px;
-    }
-
-    .carousel__stage {
-        overflow: hidden;
-        font-size: 0;
-        white-space: nowrap;
-        width: 100%;
-        height: 50%;
-        transition: text-indent 600ms;
-        position: relative;
-    }
-
-    .carousel__item {
-        display: inline-block;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        text-indent: 0;
-        opacity: 0.6;
-        text-align: center;
-    }
-
-    .carousel__image {
-        /* height: 50%; */
-        /* width: auto; */
-        display: inline-block;
-    }
-
-    .carousel__next,
-    .carousel__prev {
-        display: none;
-        position: absolute;
-        top: 50%;
-        color:thistle;
-        /* background: rgba(100,100,100,100); */
-        z-index: 1;
-        font-size: 1rem;
-        padding: 20px;
-        cursor: pointer;
-        margin-left: 25%;
-        margin-right: 25%;
-    }
 
 
-
-    .carousel__prev {
-        left: 0;
-    }
-
-    .carousel__prev:after {
-        content: ' ◄ ';
-        display: inline-block;
-    }
-
-    .carousel__next {
-        right: 0;
-    }
-
-    .carousel__next:after {
-        content: ' ► ';
-        display: inline-block;
-    }
-
-    #carousel1:checked ~ .carousel__stage .carousel__item:nth-child(1),
-    #carousel2:checked ~ .carousel__stage .carousel__item:nth-child(2),
-    #carousel3:checked ~ .carousel__stage .carousel__item:nth-child(3),
-    #carousel4:checked ~ .carousel__stage .carousel__item:nth-child(4) {
-        opacity: 1;
-    }
-
-    #carousel1:checked ~ .carousel__stage {
-        text-indent: 0;
-    }
-
-    #carousel2:checked ~ .carousel__stage {
-        text-indent: -100%;
-    }
-
-    #carousel3:checked ~ .carousel__stage {
-        text-indent: -200%;
-    }
-
-    #carousel4:checked ~ .carousel__stage {
-        text-indent: -300%;
-    }
-
-    #carousel1:checked ~ .carousel__stage .carousel__item:nth-child(1) .carousel__prev,
-    #carousel1:checked ~ .carousel__stage .carousel__item:nth-child(1) .carousel__next,
-    #carousel2:checked ~ .carousel__stage .carousel__item:nth-child(2) .carousel__prev,
-    #carousel2:checked ~ .carousel__stage .carousel__item:nth-child(2) .carousel__next,
-    #carousel3:checked ~ .carousel__stage .carousel__item:nth-child(3) .carousel__prev,
-    #carousel3:checked ~ .carousel__stage .carousel__item:nth-child(3) .carousel__next,
-    #carousel4:checked ~ .carousel__stage .carousel__item:nth-child(4) .carousel__prev,
-    #carousel4:checked ~ .carousel__stage .carousel__item:nth-child(4) .carousel__next {
-        display: block;
-    }
 </style>
+
