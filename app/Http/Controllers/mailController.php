@@ -8,16 +8,9 @@ use App\Mail\contacts;
 
 class mailController extends Controller
 {
-    public function CreateMail(Request $request)
-    {
-        $DataForm = $request->all();
-        return view('mail.contacts',compact(['Dataform']));
-    }
     public function SendMail()
     {
-        // dd("sgsdfgsdfg");
-        Mail::to('thiagogua2009@gmail.com')->send(new contacts());
-        return 'foi';
-
+        Mail::to('teofania-ronaldo@hotmail.com')->send(new contacts());
+        return back()->with('mensagem','Seu email foi enviado com sucesso !');
     }
 }

@@ -3,6 +3,7 @@
 namespace App\Mail;
 
 use Illuminate\Bus\Queueable;
+use Illuminate\Http\Request;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -26,8 +27,12 @@ class contacts extends Mailable
      *
      * @return $this
      */
-    public function build()
+    public function build(Request $request)
     {
-        return $this->view('mail.contacts');
+        $name = $request['name'];
+        $mail = $request['email'];
+        $text = $request['text'];
+        return $this->subject('Email recebido pelo site Teofania')
+                    ->view('mail.contacts', compact('name','mail','text'));
     }
 }

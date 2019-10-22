@@ -27,7 +27,5 @@ Route::get('/faleconosco', function () {
     return view('faleconosco');
 });
 
-Route::get('/createMail', 'mailController@CreateMail');
-
 Route::get('/mail', 'mailController@SendMail');
 
