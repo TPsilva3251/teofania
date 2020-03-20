@@ -10,7 +10,7 @@ class mailController extends Controller
 {
     public function SendMail()
     {
-        Mail::to('teofania-ronaldo@hotmail.com')->send(new contacts());
+        Mail::to('teofanialiteraturacrista@gmail.com')->send(new contacts());
         return back()->with('mensagem','Seu email foi enviado com sucesso !');
     }
 }
