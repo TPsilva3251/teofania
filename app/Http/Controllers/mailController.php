@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\contacts;
 
+
 class mailController extends Controller
 {
     public function SendMail()
