@@ -16,14 +16,16 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Teofania</title>
+    <title>{{ config('app.name', 'TEOFANIA') }}</title>
 </head>
-
 <body>
     <nav id="menu">
         <ul>
             <div class="alignleft">
                     <img src="https://scontent.fplu11-1.fna.fbcdn.net/v/t1.0-9/s960x960/58374414_839294843075563_2299146347745378304_o.jpg?_nc_cat=110&_nc_sid=dd9801&_nc_ohc=JceSV8QoDHkAX8hnIM7&_nc_ht=scontent.fplu11-1.fna&_nc_tp=7&oh=0d16d9817136d919166914a3f364e56a&oe=5EC882AA" width="350">
+            </div>
+            <div class="alignrigth">
+                <a href="/home">Login</a>
             </div>
             <br><br><br>
             <li><a href="/">Início</a></li>
@@ -36,6 +38,15 @@
 
     <style>
         .alignleft { float: left; }
+
+        .alignrigth{
+            float: right;
+            margin-right: 3%;
+        }
+
+        .alignrigth a{
+            color: #6D6D6D;
+        }
 
         #menu ul {
             padding: 0px;

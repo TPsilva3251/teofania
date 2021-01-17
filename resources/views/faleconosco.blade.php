@@ -56,9 +56,4 @@
     font-size: 150%;
     padding: 1%;
 }
-
-
-
-
 </style>
-

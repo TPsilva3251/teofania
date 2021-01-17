@@ -26,6 +26,23 @@ Route::get('/midias', function () {
 Route::get('/faleconosco', function () {
     return view('faleconosco');
 });
-
+Route::get('/admin', function () {
+    return view('admin');
+});
+/////////////////////////////////////////////////////////////////
+Route::resource('category', 'categoryController');
+Route::get('/category', 'categoryController@index')->name('categoria.index');
+Route::get('/category-del{id}', 'categoryController@destroy')->name('categoria.delete');
+/////////////////////////////////////////////////////////////////
+// Route::get('/biblia', 'bibliesController@index');
+Route::resource('biblia', 'bibliesController');
+Route::get('/biblia', 'bibliesController@index')->name('biblia.index');
+Route::get('biblia/create', 'bibliesController@create');
+Route::post('biblia/store', 'bibliesController@store');
+/////////////////////////////////////////////////////////////////
 Route::get('/mail', 'mailController@SendMail');
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
