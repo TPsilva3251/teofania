@@ -29,7 +29,7 @@
             </div>
             <br><br><br>
             <li><a href="/">Início</a></li>
-            <li><a href="/biblias">Bíblias</a> </li>
+            <li><a href="/biblia">Bíblias</a> </li>
             <li><a href="/livros">Livros</a></li>
             <li><a href="/midias">Mídias</a></li>
             <li><a href="/faleconosco">Fale conosco</a></li>
