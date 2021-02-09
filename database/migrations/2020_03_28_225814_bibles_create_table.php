@@ -32,6 +32,9 @@ class BiblesCreateTable extends Migration
             $table->string('isbn');
             $table->string('codigo');
             $table->float('peso');
+            $table->string('img1');
+            $table->string('img2');
+            $table->string('img3');
             $table->timestamps();
         });
     }
