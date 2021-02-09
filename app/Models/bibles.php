@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class bibles extends Model
 {
     protected $fillable = ['name', 'categories_id', 'descricao', 'traducao', 'idioma', 'tamanho_da_letra', 'capa', 'acabamento',
-                            'medida', 'formato', 'paginas', 'indice', 'indicacao', 'isbn', 'codigo', 'peso'];
+                            'medida', 'formato', 'paginas', 'indice', 'indicacao', 'isbn', 'codigo', 'peso','img1','img2','img3'];
 
     public function category()
     {
