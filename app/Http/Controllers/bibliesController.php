@@ -22,7 +22,10 @@ class bibliesController extends Controller
     }
     public function index()
     {
-         dd("index");
+        // dd('index');
+        $biblias = $this->biblia->all();
+        // dd($biblias);
+        return view('biblias', compact('biblias'));
     }
 
     /**
@@ -32,6 +35,7 @@ class bibliesController extends Controller
      */
     public function create()
     {
+        // dd('create');
         return view('biblies_create_edit');
     }
 
@@ -43,10 +47,14 @@ class bibliesController extends Controller
      */
     public function store(Request $request)
     {
+        // dd('store');
         $data_forn=$request->all();
+        // dd($data_forn);
         // dd($data_forn['img1'], $data_forn['img2'], $data_forn['img3']);
         // $data_forn=$this->biblia->create($data_forn);
+
         $bibles = bibles::create($data_forn);
+
         // $data_forn['id'] = $bibles->id();
         // dd($$data_forn['id']);
         // if($data_forn['img1'] || $data_forn['img2'] || $data_forn['img3'] !=null)
@@ -55,6 +63,12 @@ class bibliesController extends Controller
         // }
         return redirect()->route('biblia.index', compact('request'));
 
+    }
+
+    public function save_img(Request $request)
+    {
+        $data_forn=$request->all();
+        $imgs = imagesbiblesModel::create($data_forn);
     }
 
     /**
